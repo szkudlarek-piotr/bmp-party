@@ -59,6 +59,16 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "PARTY TIME!!!";
   }
 }, 1000);
+
+        const Http = new XMLHttpRequest();
+        const url='http://localhost:3000/food/all';
+        Http.open("GET", url);
+        Http.send();
+
+        Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+        }
+
     </script>
 </head>
 <body>
