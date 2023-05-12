@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Bachatowa Maszyna Piwna - niezapomniana impreza w Sięganowie</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/fontello.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/animation.css">
+        <meta http-equiv="X-UA-Compatibile" content="IE-Edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="jquery.scrollTo.min.js"></script>
+        <script>
+            function commuteForm() {
+                var word = document.getElementById("control_q").value;
+                if (word==="kaczmarski") 
+                {
+                    
+                    if (document.getElementById("car").checked) var selected_vehicle = "Samochód";
+                    else if (document.getElementById("train").checked) var selected_vehicle = "Pociąg";
+                    else if (document.getElementById("bus").checked) var selected_vehicle = "Autobus";
+                    var name = document.getElementById("fname").value;
+                    var surname = document.getElementById("lname").value;
+                    var dep_time = document.getElementById("dep_time").value;
+                    var going_from = document.getElementById("from").value;
+                    var going_by = document.getElementById("going_by").value;
+                    var going_to = document.getElementById("going_to").value;
+                    var seats = document.getElementById("seats_av").value;
+                    var possible_collect = document.getElementById("dep_place").value;
+                    document.getElementById("tabela").innerHTML="<table><tr><td>Pojazd</td><td>Imię</td><td>Inicjał nazwiska</td><td>Z</td><td>Przez</td><td>Do</td><td>Godzina wyjazdu</td><td>Mijesca odbioru</td><td>Wolne siedzenia</td></tr><tr><td>"+selected_vehicle+"</td><td>"+name+"</td><td>"+surname+"</td><td>"+going_from+"</td><td>"+going_by+"</td><td>"+going_to+"</td><td>"+dep_time+"</td><td>"+possible_collect+"</td><td>"+seats+"</td></tr></table>";
+                    document.getElementById("wynik").innerHTML="Dane podane przez Ciebie wyglądają następująco:<br/>";
+                    document.getElementById("accept_all").innerHTML="<input type='submit' value='Potwierdź'>";
+                }
+                else {
+                    document.getElementById("wynik").innerHTML="Nie udało Ci się odpowiedzieć na pytanie kontrolne. Spróbuj jeszcze raz.";
+                    document.getElementById("tabela").innerHTML="";
+                }
+
+                
+            }
+        </script>
+        <script>
+                        // Set the date we're counting down to
+                var countDownDate = new Date("May 20, 2023 18:00:00").getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+                    
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                    
+                // Time calculations for days, hours, minutes and seconds
+                var hours = Math.floor(distance / (1000 * 60 * 60 ));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                // Output the result in an element with id="demo"
+                document.getElementById("demo").innerHTML = "Zostało " + hours + " godzin, " + minutes + " minut i " + seconds + " sekund.";
+                    
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "PARTY TIME!!!";
+                }
+                }, 1000);
+        </script>
+    </head>
+    <body>
+        
+        <div id="header">
+            
+            <div id="countdown">
+                <p id="demo"></p>
+            </div>
+            <div id="party_title">
+                <i class="demo-icon icon-glass"></i>Bachatowa maszyna piwna!<i class="demo-icon icon-glass"></i>
+            </div>
+
+        </div>
+        <div class="info_form">
+            <fieldset>
+                            
+                <legend> Dodaj swój środek transportu </legend>
+
+                <div><label><input type="radio" id="train" name="vehicle"> Pociąg </label></div>
+                <div><label><input type="radio" id="car" name="vehicle" checked> Samochód </label></div>
+                <div><label><input type="radio" id="bus" name="vehicle"> Autobus </label></div>
+                <br/><br/>
+                    <div>
+                        <div>
+                            <div class="exp">
+                                <label for="fname">Twoje imię:</label>
+                            </div>
+                            <div class="inp_field">
+                                <input type="text" id="fname" name="fname" style="display: inline-block;"/>
+                            </div>
+                        </div>
+                        <br/>
+
+                        <div>
+                                <div class="exp">
+                                    <label for="lname">Inicjał nazwiska:</label>
+                                </div>
+                                <div class="inp_field">
+                                    <input type="text" id="lname" name="lname" style="display: inline-block;"/>
+                                </div>
+                        </div>
+                        <br/>
+
+
+                    <div>
+                        <div class="exp">
+                            <label for="dep_time">Czas odjazdu:</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="dep_time" name="dep_time"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div>
+                        <div class="exp">
+                            <label for="from">Jadę z:</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="from" name="from"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div>
+                        <div class="exp">
+                            <label for="going_by">Jadę przez:</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="going_by" name="going_by"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div>
+                        <div class="exp">
+                            <label for="going_to">Jadę do:</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="going_to" name="going_to"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div>
+                        <div class="exp">
+                            <label for="dep_place" style="width: 600px;">Miejsce odjazdu (lub możliwe miejsce odbioru):</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="dep_place" name="dep_place"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div>
+                        <div class="exp">
+                            <label for="seats_av">Liczba dostępnych miejsc w Twoim samochodzie:</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="seats_av" name="seats_av"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div>
+                        <div class="exp">
+                            <label for="control_q_label" style="width: 600px;">Pytanie kontrolne: napisz małymi literami, jak brzmi nazwisko ulubionego poety Piotrka:</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="control_q" name="control_q"/>
+                        </div>
+                    </div>
+
+                    </div>
+                    <br/>
+
+
+
+
+                    <br><br>
+                    <input type="submit" value="Dodaj swój dojazd!" onclick="commuteForm()">
+                </div>
+                <div id="table_container">
+                    <div id="wynik"></div>
+                    <div id="tabela"></div>
+                    <div id="accept_all"></div>
+                </div>
+
+            </fieldset>
+        </div>
+    </body>
+</html>

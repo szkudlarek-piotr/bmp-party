@@ -1,0 +1,299 @@
+body {
+    background-color: #f0f0f0;
+}
+.scrollup {
+    width: 64px;
+    height: 64px;
+    text-decoration: none;
+    background: url('img/up.png') no-repeat 0px 0px;
+    position: fixed;
+    right:50px;
+    bottom: 50px;
+    display: none;
+}
+#header {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0f0f0;
+    width: 80%;
+    font-family: 'Oswald', sans-serif;
+}
+#party_title {
+    width: calc(50% - 5px);
+    display: inline-block;
+    text-align: center;
+    border-left: solid 1px black;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+#countdown {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    font-size: 35px;
+}
+.nav {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e5e558;
+    font-size: 25px;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+    height: 49px;
+    display: flex;
+    width: 100;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav_choice {
+    order: 5;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0px;
+    display: block;
+    font-weight: 600;
+    border-right: solid 1px black;
+}
+.nav_choice:hover {
+background-color: #e457;
+}
+.nav_choice:first-child {
+    border-left: solid 1px black;
+}
+.nav_choice > a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: calc(20%-25px);
+    height: 49px;
+}
+#info {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    color: black;
+    background-color: #f0e7e7;
+}
+#news {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: 500;
+    text-align: justify;
+    font-size: 20px;
+    border-bottom: solid 1px black;
+}
+#news > h1 {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+}
+
+#news > .date {
+    font-size: 36px;
+    font-weight: 400;
+    border-bottom: 2px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    text-align: center;
+
+}
+#news > .date span {
+    background-color: #f0e7e7;
+    padding:0 10px;
+}
+#news > a {
+    color: #000;
+}
+#commute {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: 500;
+    text-align: justify;
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px black;
+}
+#commute > h1 {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding: 5px;
+}
+
+#commute > a {
+    color: #000;
+}
+#stay {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px black;
+}
+#stay > h1 {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+}
+#food {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px black;
+}
+#food > h1 {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding: 5px;
+}
+#food > a {
+    color: #000;
+}
+#food_offers {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    font-size: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.food_offer {
+    width: 20%;
+    order: 3;
+    border: solid 1px black;
+    padding: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 400px;
+    background-color: orange;
+
+}
+.food_offer > .food_name {
+    text-align: center;
+    font-weight: 700;
+}
+.food_offer > a {
+    color: black;
+}
+.food_offer > img {
+    border: solid 1px black;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#beers {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+#beers > h1 {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding: 5px;
+}
+#all_beers {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    font-size: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.beer_type {
+    width: 20%;
+    order: 3;
+    border: solid 1px black;
+    padding: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 400px;
+}
+.beer_type > img {
+    width: 96%;
+}
+.beer_type > .beer_decription {
+    text-align: justify;
+}
+#footer {
+    background-color: brown;
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+    padding: 18px;
+    text-align: center;
+}
+.text_fields {
+    justify-content: space-evenly;
+}
+.info_form {
+    width: 80%;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+.line_form {
+    width: 49%;
+    display: inline-block;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.exp {
+    width: 59%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inp_field {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+button {
+    align-items: center;
+}
+
+.departure_from > .exp {
+    width: 70%;
+}
+.departure_from > .inp_field {
+    width: 29%;
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+table td {
+    border: 1px solid black;
+    padding: 10px;
+    max-width: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#table_container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

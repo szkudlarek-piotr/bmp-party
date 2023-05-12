@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+    <title>Bachatowa Maszyna Piwna - niezapomniana impreza w Sięganowie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animation.css">
+    <script src="countdown.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+        jQuery(function($)
+        {
+            $.scrollTo(0);
+            $('#news_link').click(function() { $.scrollTo($('#news'), 500); });
+            $('#commute_link').click(function() { $.scrollTo($('#commute'), 500); });
+            $('#stay_link').click(function() { $.scrollTo($('#stay'), 500); });
+            $('#food_link').click(function() { $.scrollTo($('#food'), 500); });
+            $('#food_link2').click(function() { $.scrollTo($('#food'), 500); });
+            $('#beers_link').click(function() { $.scrollTo($('#beers'), 500); });
+            $('#beers_link2').click(function() { $.scrollTo($('#beers'), 500); });
+            $('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
+        }
+        );
+
+        //pokaż podczas przewijania
+        $(window).scroll(function() {
+            if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+            else $('.scrollup').fadeOut();
+        }
+        );
+    </script>
+    <script>
+        // Set the date we're counting down to
+var countDownDate = new Date("May 20, 2023 18:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var hours = Math.floor(distance / (1000 * 60 * 60 ));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = "Zostało " + hours + " godzin, " + minutes + " minut i " + seconds + " sekund.";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "PARTY TIME!!!";
+  }
+}, 1000);
+    </script>
+</head>
+<body>
+    
+    <div id="header">
+        
+        <div id="countdown">
+            <p id="demo"></p>
+        </div>
+        <div id="party_title">
+            <i class="demo-icon icon-glass"></i>Bachatowa maszyna piwna!<i class="demo-icon icon-glass"></i>
+        </div>
+    </div>
+    
+    <div id="info">
+        <a class="scrollup" style="width: 64px;height: 64px;"></a>
+        <div class="nav">
+            <div class="nav_choice">
+                <a id="news_link"><i class="demo-icon icon-emo-surprised"></i>Newsy</a>
+            </div>
+            <div class="nav_choice">
+                <a id="commute_link"><i class="demo-icon icon-aboveground-rail"></i>Dojazdy</a>
+            </div>
+            <div class="nav_choice">
+                <a id="stay_link"><i class="demo-icon icon-bed"></i>Noclegi</a>
+            </div>
+            <div class="nav_choice">
+                <a id="food_link"><i class="demo-icon icon-food"></i>Jedzenie</a>
+            </div>
+            <div class="nav_choice">
+                <a id="beers_link"><i class="demo-icon icon-beer"></i>Piwa</a>
+            </div>
+    </div>
+        <br/><br/><br/>
+
+        <div id="news">
+            <div class="date">
+                <span>06 maja 2023</span>
+            </div>
+            <h1>Wszystkie piwa gotowe!</h1>
+            &emsp;&emsp;Wszystkie piwa na imprezę są już gotowe. Czy spróbujesz truskawkowego kwasu Fragølsted? Chcesz posmakować Australii pijąc Całusa Smak, chmielony chmielem Galaxy? Poczułeś w sobie Brytyjczyka, który musi napić się herbaty, a przynajmniej piwa z herbatą?<br/>
+            &emsp;&emsp;Wydaje mi się, że jestem bliski stworzenia systemu dodawania dojazdów, jedzenia oraz zgłąszania zapotrzebowania na noclegi. W rozpisce dadam też opcje dojazdu komunikacją publiczną.<br/><br>
+            <div class="date">
+                <span>8 kwietnia 2023</span>
+            </div>
+            <h1>Witajcie na mojej imprezie!</h1>
+            &emsp;&emsp;Cześć! zapraszam Was wszystkich na imprezę, która odbędzie się 20 maja w Sięganowie. Aby dotrzeć do mnie, należy wjechać w Sięganów Osiedle, a następnie skręcić w drugą drogę w lewo.<br/>
+            &emsp;&emsp;Ponieważ impreza będzie zbierała wiele osób o różnych potrzebach dietetycznych, postanowiłem skupić się na tylko podstawowych potrzeb wszystkich gości - warząc dla Was piwo! Z tego powodu chciałbym, aby w razie możliwości goście przynieśli też napoje oraz jedzenie. Informacje dotyczące wyżywienia znajduję się w <a id="food_link2" href="#">odpowiednim miejscu tej strony</a>.<br/>
+            &emsp;&emsp;W razie potrzeby zrobię wszystko, by zapewnić potrzebującym nocleg. Jeżeli liczba chętnych przekroczy pojemność dostępnych łóżek, skazani będziemy niestety na rozwiązanie śpiworowe.<br/>
+            &emsp;&emsp;Listę piw, któe zamierzam uwarzyć znajdziecie w <a id="beers_link2" href="#">ostatniej sekcji tej strony</a>.
+            <br/><br/>
+        </div>
+        <div id="commute">
+            <h1>Dojazd</h1>
+            &emsp;&emsp;W tej sekcji będą pojawiały się informacje dotyczące możliwości dojazdu na koniec świata zwany Sięganowem. Nowe informacje będą się pojawiały od najstarszej do najnowszej, w przeciwieństwie do newsów.<br>
+            &emsp;&emsp;W ogólności do Łasku dojechać można pociągiem z Poznania, Łodzi, Warszawy, a w ektremalnych przypadkach nawet ze Szczecina.<br/>
+            &emsp;&emsp;<s>Historia tego połączenia kolejowego jest bardzo ciekawa. W 1862 r. na terenie Prus powstał Komitet Budowy Kolei Żelaznych z Wrocławia do Warszawy...</s><br>
+            &emsp;&emsp;Po dotarciu do Łasku postaram się ogarnąć transport dla osób potrzebujących. Z doświadczenia wiem, że wiele osób przyjedzie samochodem z Warszawy, a jedna osoba przyjedzie zapewne z Opola. <br/>&emsp;&emsp;W planach jest zamieszczenie na tej stronie systemu umawiania się na wspólne dojazdy.<br/><br/>
+        </div>
+        <div id="stay">
+            <h1>Noclegi</h1>
+            &emsp;&emsp;Jeśli warunki na to pozwolę, będę starał się Was wszystkich przenocować. W razie zbyt licznej grupy przyjezdych, konieczne będzie zastosowanie opcji śpiworowych.<br>
+            &emsp;&emsp;Jeśli mi się uda, stworzę system zapisywania się na spanko.<br/><br/>
+        </div>
+        <div id="food">
+            <h1>Jedzenie i napoje</h1>
+            &emsp;&emsp;Jeżeli po zdrowej dawce zdrowego chmielu, albo, co bardziej zalecane, przed tą dawką, zapragniecie zjeść, konieczne będzie zaopatrzenie się w żarełko. Możliwe jest zamówienie pizzy z Łasku (<i>vide</i> <a href="http://wenecja-lask.pl/" target="_blank">Wenecja</a> oraz <a href="https://grandepizza-lask.pl/" target="_blank">Grande Pizza</a>)<br>
+            &emsp;&emsp;Możliwe i pożądane jest także przyniesie własnego jedzenia oraz napojów. Niedługo stworzę system deklarowania przynoszonego jedzonka!
+            <div id="food_offers">
+                <div class="food_offer">
+                    <img src="food/krewetki_michal_kwiatek.jpg" alt="Krewetki Michała Kwiatka" >
+                    <div class="food_name">Krewetki zajebistości</div>
+                    <b>Kurcharz:</b> Michał Kwiatek<br>
+                    <b>Ilość:</b> dwie osoby<br>
+                    <b>Przepis:</b> <a href="https://www.youtube.com/watch?v=rtIjPd2GfdY" target="_blank">filmik na YT</a> 
+                </div>
+                <div class="food_offer">
+                    <img src="food/sos_porowy_monika_marcinkowska.jpg" alt="Sos porowy Moniki Marcinkowskiej" >
+                    <div class="food_name">Sos porowy</div>
+                    <b>Kurcharz:</b> Moinika Marcinkowska<br>
+                    <b>Ilość:</b> cztery osoby<br>
+                    <b>Przepis:</b> tajne przez poufne 
+                </div>
+                <div class="food_offer">
+                    
+                </div>
+
+            </div>
+        </div>
+            <div id="beers">
+                <h1>Piwa</h1>
+                Poniżej przedstawiam piwa, które będą pieścić Wasze spragnione podniebienia na imprezie.
+                <div id="all_beers">
+                    <div class="beer_type" style="background-color: yellow;">
+                        <img src="beer_symbols/bowling_ball.png">
+                        <div class="beer_description">
+                            <div><b>Nazwa:</b> Bowling ball</div>
+                            <div><b>Styl:</b> Earl Grey APA</div>
+                            <div><b>Ekstrakt:</b> Około 12 BLG</div>
+                            <div><b>Moc:</b> Około 5%</div>
+                            <div><b>Składniki:</b> Słód pilzneński, chmiel Iunga, chmiel Chinook, Herbata Earl Grey</div>
+                        </div>
+                    </div>
+                        <div class="beer_type" style="background-color: red;">
+                            <img src="beer_symbols/strawberry.png">
+                            <div class="beer_description">
+                                <div><b>Nazwa:</b> Fragølsted</div>
+                                <div><b>Styl:</b> Strawberry sour ale</div>
+                                <div><b>Ekstrakt:</b> Około 12 BLG</div>
+                                <div><b>Moc:</b> Około 5%</div>
+                                <div><b>Składniki:</b> Słód pilzneński, chmiel Iunga, chmiel Chinook, truskawki</div>
+                            </div>
+                        
+                    </div>
+                    <div class="beer_type" style="background-color: #f6a709;">
+                        <img src="beer_symbols/calusa_smak.png">
+                        <div class="beer_description">
+                            <div><b>Nazwa:</b> Całusa smak</div>
+                            <div><b>Styl:</b> Australian pale ale</div>
+                            <div><b>Ekstrakt:</b> 16.5 BLG</div>
+                            <div><b>Moc:</b> 7.1%</div>
+                            <div><b>Składniki:</b> Słód pilzneński, chmiel Galaxy, Voss Kveik</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="footer">
+            Czekam na Ciebie!
+        </div>
+    </div>
+</body>

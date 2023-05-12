@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Bachatowa Maszyna Piwna - niezapomniana impreza w Sięganowie</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/fontello.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/animation.css">
+        <meta http-equiv="X-UA-Compatibile" content="IE-Edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="jquery.scrollTo.min.js"></script>
+        <script>
+            function foodForm() {
+                var who_cooks = document.getElementById("who_cooks").value;
+                var food_name = document.getElementById("food_name").value;
+                var food_link = document.getElementById("food_link").value;
+                var food_amount = document.getElementById("food_amount").value;
+                var recipe_link = document.getElementById("recipe_link").value;
+                if (recipe_link === "brak" || recipe_link === "-") {
+                    document.getElementById("food_div").innerHTML="<div class='food_offer'><img src="+food_link+"><br><div class='food_name'>"+food_name+"</div><br><b>Kurcharz: </b>"+who_cooks+"<br/><br/><b>Ilość: </b> "+food_amount+"<br/></div>";
+                    document.getElementById("accept_food").innerHTML="<input type='submit' value='Potwierdź'>";
+                }
+                else {
+                    document.getElementById("food_div").innerHTML="<div class='food_offer'><img src="+food_link+"><br><div class='food_name'>"+food_name+"</div><br><b>Kurcharz: </b>"+who_cooks+"<br/><br/><b>Ilość: </b> "+food_amount+"<br/><br/><b>Link do przepisu: </b><a href="+recipe_link+" targeg = '_blank'>link</a></div>";
+                    document.getElementById("accept_food").innerHTML="<input type='submit' value='Potwierdź'>";
+                }
+                }
+
+        </script>
+        <script>
+                        // Set the date we're counting down to
+                var countDownDate = new Date("May 20, 2023 18:00:00").getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+                    
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                    
+                // Time calculations for days, hours, minutes and seconds
+                var hours = Math.floor(distance / (1000 * 60 * 60 ));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                // Output the result in an element with id="demo"
+                document.getElementById("demo").innerHTML = "Zostało " + hours + " godzin, " + minutes + " minut i " + seconds + " sekund.";
+                    
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "PARTY TIME!!!";
+                }
+                }, 1000);
+        </script>
+    </head>
+    <body>
+        
+        <div id="header">
+            
+            <div id="countdown">
+                <p id="demo"></p>
+            </div>
+            <div id="party_title">
+                <i class="demo-icon icon-glass"></i>Bachatowa maszyna piwna!<i class="demo-icon icon-glass"></i>
+            </div>
+
+        </div>
+        <div class="info_form">
+            <fieldset>
+                            
+                <legend> Powiedz, co przygotujesz! </legend>
+
+                    <div>
+                        <div>
+                            <div class="exp">
+                                <label for="who_cooks">Kto przygotowuje:</label>
+                            </div>
+                            <div class="inp_field">
+                                <input type="text" id="who_cooks" name="who_cooks" style="display: inline-block;"/>
+                            </div>
+                        </div>
+                        <br/>
+
+                        <div>
+                                <div class="exp">
+                                    <label for="food_name">Nazwa dania:</label>
+                                </div>
+                                <div class="inp_field">
+                                    <input type="text" id="food_name" name="food_name" style="display: inline-block;"/>
+                                </div>
+                        </div>
+                        <br/>
+
+
+                    <div>
+                        <div class="exp">
+                            <label for="food_link">Link do zdjęcia (im bardziej kwadratowe tym lepsze):</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="food_link" name="food_link"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div>
+                        <div class="exp">
+                            <label for="food_link">Ilość (na przykład 'Dla dwóch osób'):</label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="food_amount" name="food_amount"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div>
+                        <div class="exp">
+                            <label for="recipe_link">Link do przepisu (jeśli nie masz, napisz 'brak' lub '-'): </label>
+                        </div>
+                        <div class="inp_field">
+                            <input type="text" id="recipe_link" name="recipe_link"/>
+                        </div>
+                    </div>
+
+
+                    <br><br>
+                    <input type="submit" value="Dodaj swoje jedzonko!" onclick="foodForm()">
+                </div>
+                <div id="table_container">
+                    
+                </div>
+
+            </fieldset>
+            <div id="food_div"></div>
+            <div id="accept_food"></div>
+        </div>
+    </body>
+</html>
